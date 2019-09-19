@@ -11,7 +11,7 @@ y = torch.Tensor([[0], [1],
 
 # I put one more layer. It learns with [2, 2, 2, 2, 2, 2, 2, 2]
 
-net = Net(layers_size= [2, 2, 2, 2, 2, 2, 2, 2, 2],
+net = Net(layers_size= [2, 2, 2, 2, 2, 2, 2, 2],
           out_size = 1,
           act= 'tanh',
           save_int= False)
@@ -31,7 +31,7 @@ if get_parameters:
     params.add(net.state_dict())
     
 
-epochs= 5000000
+epochs= 1000000
 
 t0_total = time.time()
 
@@ -60,7 +60,7 @@ time_elapsed = (t1_total - t0_total)/60.
           
     
 print('prediction: ', net(X))
-print('total time: %.2 min' % time_elapsed )
+print('total time: %.2f min' % time_elapsed )
                
     ### Recording some results
     #log_dic['epoch'].append(epoch)

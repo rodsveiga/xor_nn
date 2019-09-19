@@ -17,6 +17,9 @@ class Net(nn.Module):
         
         self.layers = nn.ModuleList()
         
+        print('layers_size:')
+        print(layers_size)
+        
         if act == 'sig':
             self.activation = nn.Sigmoid()
         if act == 'tanh':
